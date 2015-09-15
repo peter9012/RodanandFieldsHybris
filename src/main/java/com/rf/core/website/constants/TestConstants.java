@@ -35,7 +35,7 @@ public class TestConstants {
 	public static final String FIRST_NAME = "auto";
 	public static final String LAST_NAME = FIRST_NAME;		
 	public static final String EMAIL_ADDRESS_SUFFIX = "@xyz.com";
-	//public static final String PASSWORD = "test1234";
+	public static final String PASSWORD = "test1234";
 	//public static final String PASS = "111maiden";
 	public static final String ADDRESS_LINE_1_CA = "5502 - 54th Street";
 	public static final String NEW_ADDRESS_LINE_1_CA = "5503 - 54th Street";
@@ -147,6 +147,9 @@ public class TestConstants {
 	public static final String RCUSER_SCHEDULED_DATE = "July 8, 2015";
 	public static final String RCUSER_GRAND_TOTAL_CA = "CAD$ 668.33";
 	public static final String RCUSER_AUTOSHIP_STATUS = "SUBMITTED";
+	public static final String RC_FIRST_NAME = "RCUser";
+	public static final String RC_LAST_NAME = "Test";
+	public static final String RC_USER_PASSWORD_STG2 = "test1234";
 
 	/**
 	 * Preferred Customer Details
@@ -163,7 +166,9 @@ public class TestConstants {
 
 	public static final String PCUSER_SPONSOR_PWS_EMAIL_ID = "pcusersponserpws@stg2.com";
 	//public static final String PCUSER_SPONSOR_PWS_PASSWORD = "test1234";
-
+	public static final String PC_FIRST_NAME = "PCUser";
+	public static final String PC_LAST_NAME = "Test";
+	public static final String PC_USER_PASSWORD_STG2 = "test1234";
 	/**
 	 * 
 	 */
@@ -218,12 +223,18 @@ public class TestConstants {
 	public static final String POSTAL_CODE_US = "02025-4001";
 	public static final String PHONE_NUMBER_US = "9178873219";
 	public static final String SECURITY_NUMBER_US = "123";
+	public static final String NEW_ADDRESS_PHONE_NUMBER_US = "9178873219";
 
 	/**
 	 * 
 	 */
 	public static final String NEW_BILLING_PROFILE_NAME_US = "newBPName";
 	public static final String NEW_BILLING_PROFILE_NAME = "newBPName";
+	/**
+	 * 
+	 */
+	public static final String CRM_LOGIN_USERNAME = "testautomation@rodanandfields.com.qa2";
+	public static final String CRM_LOGIN_PASSWORD = "RFtest1234";
 
 }
 

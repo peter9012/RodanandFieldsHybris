@@ -200,6 +200,25 @@ public class RFWebsiteBasePage extends RFBasePage{
 		driver.waitForLoadingImageToDisappear();
 		driver.waitForPageLoad();
 	}
+	public void enterNewRCDetails(String firstName,String lastName,String emailAddress,String password) throws InterruptedException{
+		  int randomNum = CommonUtils.getRandomNum(10000, 1000000);
+		  driver.findElement(By.id("first-Name")).sendKeys(firstName);
+		  logger.info("first name entered as "+firstName);
+		  driver.findElement(By.id("last-name")).sendKeys(lastName);
+		  logger.info("last name entered as "+lastName);
+		  driver.findElement(By.id("email-account")).sendKeys(emailAddress+"\t");
+		  logger.info("email entered as "+emailAddress);
+		  driver.pauseExecutionFor(1000);
+		  driver.waitForSpinImageToDisappear();
+		  driver.findElement(By.id("password")).sendKeys(password);
+		  logger.info("password entered as "+password);
+		  driver.findElement(By.id("the-password-again")).sendKeys(password);
+		  logger.info("confirm password entered as "+password);
+		  driver.click(By.id("next-button"));  
+		  logger.info("Create New Account button clicked");
+		  driver.waitForLoadingImageToDisappear();
+		  driver.waitForPageLoad();
+		 }
 
 	public void enterNewPCDetails(String firstName,String lastName,String password) throws InterruptedException{
 		int randomNum = CommonUtils.getRandomNum(10000, 1000000);
@@ -223,7 +242,27 @@ public class RFWebsiteBasePage extends RFBasePage{
 		driver.click(By.xpath("//input[@id='next-button']"));		
 		logger.info("Create New Account button clicked");		
 	}
-
+	public void enterNewPCDetails(String firstName,String lastName,String emailAddress,String password) throws InterruptedException{
+		  int randomNum = CommonUtils.getRandomNum(10000, 1000000);
+		  driver.findElement(By.id("first-Name")).sendKeys(firstName);
+		  logger.info("first name entered as "+firstName);
+		  driver.findElement(By.id("last-name")).sendKeys(lastName);
+		  logger.info("last name entered as "+lastName);
+		  driver.findElement(By.id("email-account")).sendKeys(emailAddress+"\t");
+		  logger.info("email entered as "+emailAddress);
+		//  driver.pauseExecutionFor(1000);
+		 // driver.waitForSpinImageToDisappear();
+		  driver.findElement(By.id("password")).sendKeys(password);
+		  logger.info("password entered as "+password);
+		  driver.findElement(By.id("the-password-again")).sendKeys(password);
+		  logger.info("confirm password entered as "+password);
+		  driver.click(By.xpath("//input[@id='become-pc']/.."));
+		  logger.info("check box for PC user checked");
+		  driver.click(By.xpath("//input[@id='next-button']"));  
+		  logger.info("Create New Account button clicked");  
+		  driver.waitForLoadingImageToDisappear();
+		  driver.waitForPageLoad();
+		 }
 	public boolean isPopUpForPCThresholdPresent() throws InterruptedException{
 		boolean isPopUpForPCThresholdPresent=false;
 		driver.waitForElementPresent(By.xpath("//div[@id='popup-content']//p[contains(text(),'Please add products')]"));
@@ -287,6 +326,20 @@ public class RFWebsiteBasePage extends RFBasePage{
 		driver.findElement(By.id("address.phonenumber")).sendKeys(phoneNumber);
 		logger.info("phone number entered is "+phoneNumber);
 	}
+	public void enterMainAccountInfo(String addressLine1,String city,String postalCode,String phoneNumber){
+		driver.findElement(By.id("address.line1")).sendKeys(addressLine1);
+		logger.info("Address Line 1 entered is "+addressLine1);
+		driver.findElement(By.id("address.townCity")).sendKeys(city);
+		logger.info("City entered is "+city);
+		driver.click(By.id("state"));
+		driver.waitForElementPresent(By.xpath("//select[@id='state']/option[2]"));
+		driver.click(By.xpath("//select[@id='state']/option[2]"));
+		logger.info("state selected");
+		driver.findElement(By.id("address.postcode")).sendKeys(postalCode);
+		logger.info("postal code entered is "+postalCode);
+		driver.findElement(By.id("address.phonenumber")).sendKeys(phoneNumber);
+		logger.info("phone number entered is "+phoneNumber);
+}
 
 	public void clickOnContinueWithoutSponsorLink() throws InterruptedException{
 		driver.waitForElementPresent(By.id("continue-no-sponsor"));
@@ -409,6 +462,12 @@ public class RFWebsiteBasePage extends RFBasePage{
 		driver.click(By.xpath("//input[@class='refine-products-button'][contains(@value,'Price')]"));
 		driver.click(By.xpath("//input[@class='refine-products-button'][contains(@value,'Price')]/following::li[1]/form/div"));
 		logger.info("filter done for low to high price");
+	}
+	public void applyPriceFilterHighToLow() throws InterruptedException{
+		driver.waitForElementPresent(By.xpath("//input[@class='refine-products-button'][contains(@value,'Price')]"));
+		driver.click(By.xpath("//input[@class='refine-products-button'][contains(@value,'Price')]"));
+		driver.click(By.xpath("//input[@class='refine-products-button'][contains(@value,'Price')]/following::li[3]/form/div"));
+		logger.info("filter done for high to Low price");
 	}
 
 	public boolean verifyPCPerksTermsAndConditionsPopup() throws InterruptedException{

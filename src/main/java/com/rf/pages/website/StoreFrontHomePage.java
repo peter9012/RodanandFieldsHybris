@@ -137,7 +137,8 @@ public class StoreFrontHomePage extends RFWebsiteBasePage {
 		driver.click(By.xpath("//div[@class='kit-price' and contains(text(),'"+kitPrice+"')]"));
 		regimenName = regimenName.toUpperCase();
 		driver.pauseExecutionFor(500);
-		driver.click(By.xpath("//div[@class='regimen-name' and contains(text(),'"+regimenName+"')]"));
+		//driver.click(By.xpath("//div[@class='regimen-name' and contains(text(),'"+regimenName+"')]"));
+		driver.click(By.xpath("//div[@class='regimen-kit-selection-content']//div[4]/div[@class='regimen-name']"));
 		driver.pauseExecutionFor(500);
 		logger.info("Regimen is selected as "+regimenName);
 		driver.click(By.cssSelector("input[value='Next']"));
