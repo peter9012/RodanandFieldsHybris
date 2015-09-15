@@ -92,37 +92,19 @@ public class CRMHomePage extends RFWebsiteBasePage {
 		return driver.findElement(VERIFY_EMAIL_ADDRESS_LOC).getText().toLowerCase().contains(emailAdd.toLowerCase());
 	}
 	public boolean verifyEditPWSDomainButton(){
-	//	driver.switchTo().defaultContent();
-		//driver.waitForElementPresent(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]"));
-		//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]")));
 		return driver.isElementPresent(EDIT_PWS_DOMAIN_BUTTON_LOC);
 	}
 	public boolean verifyPulseButton(){
-		//driver.switchTo().defaultContent();
-		//driver.waitForElementPresent(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]"));
-		//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]")));
-		driver.waitForPageLoad();
-		driver.waitForElementPresent(PULSE_BUTTON_LOC);
-		System.out.println("pulse status is"+driver.isElementPresent(PULSE_BUTTON_LOC));
 		return driver.isElementPresent(PULSE_BUTTON_LOC);
 		
 	}
 	public boolean verifyListHoverAutoShipTitle(){
-//		driver.switchTo().defaultContent();
-//		driver.waitForElementPresent(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]"));
-//		driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]")));
 		return driver.isElementPresent(AUTOSHIP_TITLE_LOC);
 	}
 	public boolean verifyListHoverPerformanceKPI(){
-//		driver.switchTo().defaultContent();
-//		driver.waitForElementPresent(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]"));
-//		driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]")));
 		return driver.isElementPresent(PERFORMANCE_KPI_LOC);
 	}
 	public boolean verifyListHoverAccountActivities(){
-//		driver.switchTo().defaultContent();
-//		driver.waitForElementPresent(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]"));
-//		driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='servicedesk']//iframe[contains(@id,'ext-comp-1064')]")));
 		return driver.isElementPresent(ACCOUNT_ACTIVITIES_LOC);
 	}
 	public boolean verifyCountryName(){
