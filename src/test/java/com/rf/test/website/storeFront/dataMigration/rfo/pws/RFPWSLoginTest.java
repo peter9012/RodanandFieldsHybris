@@ -57,7 +57,7 @@ public class RFPWSLoginTest extends RFWebsiteBaseTest {
 	}
 
 	//Hybris Phase 2-4395 Consultant with PWS -Someone else’s PWS - Her own PW
-	@Test(enabled=false)
+	@Test (invocationCount=2)
 	public void testConsultantWithPWSLoginFromOthersPWS_4395() throws InterruptedException{
 		RFO_DB = driver.getDBNameRFO();		
 		List<Map<String, Object>> randomConsultantList =  null;
@@ -173,7 +173,7 @@ public class RFPWSLoginTest extends RFWebsiteBaseTest {
 
 
 	//Hybris Phase 2-4399 PC, whose Sponsor has PWS - Sponsor’s PWS - Sponsor’s PWS
-	@Test(enabled=false)
+	@Test(invocationCount=2)
 	public void testPreferredCustomerWithPWSSponsorLoginFromSponsorsPWS_4399() throws InterruptedException{
 		RFO_DB = driver.getDBNameRFO();		
 		List<Map<String, Object>> randomPCWithPWSSponsorList =  null;

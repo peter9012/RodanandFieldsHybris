@@ -115,7 +115,7 @@ public class EditBillingTest extends RFWebsiteBaseTest{
 	}
 
 	// Hybris Phase 2-2049 :: Version : 1 :: Edit billing profile in autoship template
-	@Test
+	@Test (invocationCount=20)
 	public void testEditBillingProfileInAutoshipTemplate_2049() throws InterruptedException, SQLException{
 		int randomNum = CommonUtils.getRandomNum(10000, 1000000);
 

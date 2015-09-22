@@ -238,7 +238,7 @@ public class ViewAccountDetailsTest extends RFWebsiteBaseTest{
 	}
 
 	// Hybris Phase 2-4191 :: Version : 1 :: Enrolled Consultant, Has CRP/ Has Pulse, Has Submitted Orders, No Downlines, Active 
-	@Test
+	@Test (invocationCount=20)
 	public void testEnrolledConsultantHasCRPHasPulseSubmittedOrdersACTIVE_4191() throws InterruptedException{
 		RFO_DB = driver.getDBNameRFO();
 		List<Map<String, Object>> randomConsultantList =  null;

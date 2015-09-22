@@ -35,7 +35,7 @@ public class AddShippingTest extends RFWebsiteBaseTest{
 	private String RFO_DB = null;		
 
 	// Hybris Phase 2-2029 :: Version : 1 :: Add shipping address on 'Shipping Profile' page 	
-	@Test
+	@Test (invocationCount=20)
 	public void testAddNewShippingAddressOnShippingProfilePage_2029() throws InterruptedException, SQLException{
 		int randomNum = CommonUtils.getRandomNum(10000, 1000000);
 		RFO_DB = driver.getDBNameRFO();

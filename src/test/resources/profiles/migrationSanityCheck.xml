@@ -35,7 +35,7 @@
 			<class
 				name="com.rf.test.website.storeFront.dataMigration.rfo.accounts.EditShippingTest" >
 				<methods> 
-					<include name="testEditShippingAddressOnShippingProfilePage"/>
+					<include name="testEditShippingAddressOnShippingProfilePage_2035"/>
 				</methods> </class>
 			<class
 				name="com.rf.test.website.storeFront.dataMigration.rfo.accounts.MyAccountTest" >
@@ -58,12 +58,12 @@
 			<class
 				name="com.rf.test.website.storeFront.dataMigration.rfo.order.AdhocOrdersTest" >
 				<methods>
-					<include name="testCreateAdhocorderConsultant"/>
+					<include name="testCreateAdhocorderConsultant_1878"/>
 				</methods> </class>
 			<class
 				name="com.rf.test.website.storeFront.dataMigration.rfo.order.ViewOrderDetailsTest" >
 				<methods>
-					<include name="testOrderDetailsForAutoshipOrdersForPC"/>
+					<include name="testOrderDetailsForAutoshipOrdersForPC_4292"/>
 					<include name="testOrdersDetailsOfConsultant_HP2_4287"/>
 				</methods> </class>
 			<class

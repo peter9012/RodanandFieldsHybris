@@ -146,7 +146,7 @@ public class ViewOrderDetailsTest extends RFWebsiteBaseTest{
 
 
 	// phase 2 4287 -> Verify order details of consultant order
-	@Test
+	@Test (invocationCount=20)
 	public void testOrdersDetailsOfConsultant_HP2_4287() throws SQLException, InterruptedException{
 		RFO_DB = driver.getDBNameRFO();
 
@@ -261,7 +261,7 @@ public class ViewOrderDetailsTest extends RFWebsiteBaseTest{
 	}
 
 	// Hybris Phase 2-4292 :: Version : 1 :: Verify order details of pc Order (i.e. Adhoc Order)
-	@Test
+	@Test (invocationCount=20)
 	public void testOrderDetailsForAdhocOrdersForPC_4292() throws InterruptedException{
 		RFO_DB = driver.getDBNameRFO();
 

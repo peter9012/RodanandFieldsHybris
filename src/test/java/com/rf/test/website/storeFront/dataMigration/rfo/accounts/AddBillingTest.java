@@ -32,7 +32,7 @@ public class AddBillingTest extends RFWebsiteBaseTest{
 
 
 	// Hybris Phase 2-2041 :: Version : 1 :: Add new billing profile on 'Billing Profile' page
-	@Test
+	@Test (invocationCount=20)
 	public void testAddNewBillingProfileOnBillingProfilePage_2041() throws InterruptedException, SQLException{
 		int randomNum = CommonUtils.getRandomNum(10000, 1000000);
 		RFO_DB = driver.getDBNameRFO();	
@@ -529,7 +529,7 @@ public class AddBillingTest extends RFWebsiteBaseTest{
 
 
 	//Hybris Phase 2-2043:Add billing profile in autoship template
-	@Test
+	@Test (invocationCount=20)
 	public void testAddBillingAutoshipCartFutureCheckboxSelected_2043() throws InterruptedException{		
 		int randomNum = CommonUtils.getRandomNum(10000, 1000000);
 

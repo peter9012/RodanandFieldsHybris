@@ -34,7 +34,7 @@ public class AutoshipTest extends RFWebsiteBaseTest{
 	private String RFO_DB = null;
 
 	// Hybris Phase 2-130:change shipping method on autoship - PC	
-	@Test
+	@Test (invocationCount=20)
 	public void testChangeShippingMethodOnPCAutoShip_130() throws InterruptedException{
 
 		RFO_DB = driver.getDBNameRFO();
@@ -85,7 +85,7 @@ public class AutoshipTest extends RFWebsiteBaseTest{
 	
 
 	// Hybris Phase 2-131:change shipping method on autoship - Consultant
-	@Test
+	@Test (invocationCount=20)
 	public void testChangeShippingMethodOnConsultantAutoShip_131() throws InterruptedException{
 		int randomNum = CommonUtils.getRandomNum(10000, 1000000);
 		RFO_DB = driver.getDBNameRFO();

@@ -39,7 +39,7 @@ public class MyAccountTest extends RFWebsiteBaseTest{
 	private String RFO_DB = null;
 
 	// Test Case Hybris Phase 2-3720 :: Version : 1 :: Perform Consultant Account termination through my account
-	@Test
+	@Test (invocationCount=20)
 	public void testAccountTerminationPageForConsultant_3720() throws InterruptedException {
 		RFO_DB = driver.getDBNameRFO();	
 		List<Map<String, Object>> randomConsultantList =  null;
@@ -78,7 +78,7 @@ public class MyAccountTest extends RFWebsiteBaseTest{
 	}
 
 	//Test Case Hybris Phase 2-3719 :: Version : 1 :: Perform PC Account termination through my account
-	@Test
+	@Test (invocationCount=20)
 	public void testAccountTerminationPageForPCUser_3719() throws InterruptedException{
 		RFO_DB = driver.getDBNameRFO();
 		List<Map<String, Object>> randomPCUserList =  null;
