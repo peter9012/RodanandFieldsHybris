@@ -485,7 +485,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testCancelledCRPAutoshipForActiveConsultant_4301() throws InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testCancelledCRPAutoshipForActiveConsultant_4301 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO(); 
 		String accountID = null;
 		String firstName = null;
@@ -619,7 +619,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testAdhocOrdersForMultiplsLineItem_2273() throws InterruptedException  {
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testAdhocOrdersForMultiplsLineItem_2273 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO(); 
 		List<Map<String, Object>> randomConsultantList =  null;
 		String consultantEmailID = null;
@@ -694,7 +694,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testAdhocOrdersFromConsultantAndPc_2272() throws InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testAdhocOrdersFromConsultantAndPc_2272 Thread ID: " + id);
 
 		RFO_DB = driver.getDBNameRFO();
 		List<Map<String, Object>> randomConsultantList =  null;
@@ -740,7 +740,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void checkDetailsOfCRpAutoshipForInactiveConsultant_4304() throws InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("checkDetailsOfCRpAutoshipForInactiveConsultant_4304 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -856,7 +856,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testPCAutoShipTemplateDetails_HP2_4300() throws InterruptedException, SQLException , ClassNotFoundException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testPCAutoShipTemplateDetails_HP2_4300 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -968,7 +968,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testOrderDetailsOfCRPAutoShipOrder_HP2_4286() throws SQLException, InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testOrderDetailsOfCRPAutoShipOrder_HP2_4286 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1076,7 +1076,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testOrdersDetailsOfConsultant_HP2_4287() throws SQLException, InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testOrdersDetailsOfConsultant_HP2_4287 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1188,7 +1188,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testOrderDetailsForAutoshipOrdersForPC_4291() throws InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testOrderDetailsForAutoshipOrdersForPC_4291 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1301,7 +1301,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testOrderDetailsForAdhocOrdersForRC_4293() throws InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testOrderDetailsForAdhocOrdersForRC_4293 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1424,7 +1424,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testReturnOrderHistory_1983() throws InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testReturnOrderHistory_1983 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String subTotalDB = null;
 		String taxDB = null; 
@@ -1486,7 +1486,7 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	@Test
 	public void testPCAutoshipReturnOrderInformation_4459() throws InterruptedException{
 		long id = Thread.currentThread().getId();
-		System.out.println("testname Thread ID: " + id);
+		System.out.println("testPCAutoshipReturnOrderInformation_4459 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String subTotalDB = null;
 		String taxDB = null; 
