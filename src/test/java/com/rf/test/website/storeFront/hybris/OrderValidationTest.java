@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.rf.core.utils.CommonUtils;
@@ -27,6 +28,7 @@ import com.rf.pages.website.storeFront.StoreFrontReportOrderComplaintPage;
 import com.rf.pages.website.storeFront.StoreFrontReportProblemConfirmationPage;
 import com.rf.pages.website.storeFront.StoreFrontUpdateCartPage;
 import com.rf.test.website.RFWebsiteBaseTest;
+
 
 public class OrderValidationTest extends RFWebsiteBaseTest{
 	private static final Logger logger = LogManager
@@ -50,14 +52,23 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	String country=null;
 	String env = null;
 
+	@BeforeMethod
+	public void beforeMethod() {
+		long id = Thread.currentThread().getId();
+		System.out.println("Beforemethod Thread ID: " + id);
+	}
+	
 	// Hybris Phase 2-1980 :: Version : 1 :: Order >>Actions >>Report problems
 	@Test
 	public void testOrdersReportProblems_1980() throws SQLException, InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testOrdersReportProblems_1980 Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		List<Map<String, Object>> randomConsultantList =  null;
 		String consultantEmailID = null;
 		String accountID = null;
 		storeFrontHomePage = new StoreFrontHomePage(driver);
+		
 		while(true){
 			randomConsultantList = DBUtil.performDatabaseQuery(DBQueries_RFO.callQueryWithArguement(DBQueries_RFO.GET_RANDOM_ACTIVE_CONSULTANT_WITH_ORDERS_AND_AUTOSHIPS_RFO,countryId),RFO_DB);
 			consultantEmailID = (String) getValueFromQueryResult(randomConsultantList, "UserName");  
@@ -95,6 +106,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	// Hybris Project-1982:Order >>Actions >>Details
 	@Test
 	public void testCheckOrdersDetailsFromActionsTab_1982() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("Checkorderdetails Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO(); 
 
 		List<Map<String, Object>> randomConsultantList =  null;
@@ -208,6 +221,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Phase 2-1981:Orders page UI for RC
 	@Test
 	public void testOrdersPageUIForRCUser_HP2_1981() throws SQLException, InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("orderspageuiforRCuser Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO(); 
 		List<Map<String, Object>> orderStatusList =  null;
 		List<Map<String, Object>> orderGrandTotalList =  null;
@@ -273,6 +288,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Project-1979:Orders page UI for PC and edit cart
 	@Test
 	public void testOrderPageUIAndEditCartForPC_1979() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("orderpageUI and Edit cart for PC Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		List<Map<String, Object>> randomPCUserList =  null;
 		String pcUserEmailID = null;
@@ -467,6 +484,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Project-4301:In DB, check details of cancelled CRP autoship for active Consultant.
 	@Test
 	public void testCancelledCRPAutoshipForActiveConsultant_4301() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO(); 
 		String accountID = null;
 		String firstName = null;
@@ -599,6 +618,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	// Hybris Project-2273:Adhoc Orders for Consultant and PC and RC --> Multiple line Item
 	@Test
 	public void testAdhocOrdersForMultiplsLineItem_2273() throws InterruptedException  {
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO(); 
 		List<Map<String, Object>> randomConsultantList =  null;
 		String consultantEmailID = null;
@@ -672,6 +693,9 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Project-2272:Adhoc Orders from Consultant and PC and RC --> Single line Item
 	@Test
 	public void testAdhocOrdersFromConsultantAndPc_2272() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
+
 		RFO_DB = driver.getDBNameRFO();
 		List<Map<String, Object>> randomConsultantList =  null;
 		String consultantEmailID = null;
@@ -715,6 +739,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	// Hybris Project-4304:In DB, check details of CRP autoship for inactive consultant
 	@Test
 	public void checkDetailsOfCRpAutoshipForInactiveConsultant_4304() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -829,6 +855,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	// Hybris Phase 2-4300 :: Version : 1 :: Verify PC autoship template details. 
 	@Test
 	public void testPCAutoShipTemplateDetails_HP2_4300() throws InterruptedException, SQLException , ClassNotFoundException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -939,6 +967,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Phase 2-4286 :: Version : 1 :: Verify order details of CRP autoship order
 	@Test
 	public void testOrderDetailsOfCRPAutoShipOrder_HP2_4286() throws SQLException, InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1045,6 +1075,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	// Hybris Project-4287 -> Verify order details of consultant order
 	@Test
 	public void testOrdersDetailsOfConsultant_HP2_4287() throws SQLException, InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1155,6 +1187,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	// Hybris Phase 2-4291 :: Version : 1 :: Verify PC autoship order. 
 	@Test
 	public void testOrderDetailsForAutoshipOrdersForPC_4291() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1266,6 +1300,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Phase 2-4293 :: Version : 1 :: Verify details of retail order. 
 	@Test
 	public void testOrderDetailsForAdhocOrdersForRC_4293() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String firstName = null;
 		String addressLine1 = null;
@@ -1387,6 +1423,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Project-1983:Return order history
 	@Test
 	public void testReturnOrderHistory_1983() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String subTotalDB = null;
 		String taxDB = null; 
@@ -1447,6 +1485,8 @@ public class OrderValidationTest extends RFWebsiteBaseTest{
 	//Hybris Project-4459:Check Return order information on the Order history page. (Returning PC Perks Autoship Order)
 	@Test
 	public void testPCAutoshipReturnOrderInformation_4459() throws InterruptedException{
+		long id = Thread.currentThread().getId();
+		System.out.println("testname Thread ID: " + id);
 		RFO_DB = driver.getDBNameRFO();
 		String subTotalDB = null;
 		String taxDB = null; 

@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="jenkinssmoke">
+<suite name="jenkinssmoke" parallel="methods" thread-count="4">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
-	<test name="SmokeTest">
+	<test name="SmokeTest" group-by-instances="true">
 		<classes>
 			<class name="com.rf.test.website.storeFront.hybris.OrderValidationTest">
-				<methods>
+				<!-- <methods>
 					<include name="testCreateAdhocOrderConsultant_1878" />
 					<include name="testCreateAdhocOrderPC_1877" />
 					<include name="testCreateAdhocOrderRC_1879" />
-				</methods>
+				</methods>  -->
 			</class>
-			<class name="com.rf.test.website.storeFront.hybris.expressEnrollment.biz.PersonalResultsKitTest">
-				<methods>
-					<include name="testExpressEnrollmentPersonalResultsKitUnblemishRegimen_67" />
-				</methods>
-			</class>
-			<class name="com.rf.test.website.storeFront.hybris.EnrollmentValidationTest">
-				<methods>
-					<include name="testPCEnrollment_1308" />
-					<include name="testTermsAndConditionsRCEnrollment_2188" />
-					<include name="testStandardEnrollmentWithoutCRPAndPulse_3255" />					
-				</methods>
-			</class>
-			<class name="com.rf.test.website.storeFront.hybris.standardEnrollment.corp.PersonalResultsKitTest">
-				<methods>
-					<include name="testStandardEnrollmentPersonalKitReverseRegimen_50" />
-					<include name="testTermsAndConditionsRCEnrollment_2188" />					
-				</methods>
-			</class>			
- 
+			
 		</classes>
 	</test>
 </suite>
