@@ -5,6 +5,7 @@ import java.util.Map;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.rf.core.utils.CommonUtils;
@@ -47,6 +48,11 @@ public class EnrollmentValidationTest extends RFWebsiteBaseTest{
 	private String country = null;
 	private String RFO_DB = null;
 	private String env = null;
+	@BeforeMethod
+	public void beforeMethod() {
+		long id = Thread.currentThread().getId();
+		System.out.println("Beforemethod Thread ID: " + id);
+	}
 
 	//Hybris Project-1361:Enroll as consultant using invalid card numbers
 	@Test

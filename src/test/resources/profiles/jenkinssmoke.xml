@@ -6,7 +6,7 @@
 	</listeners>
 	<test name="SmokeTest" group-by-instances="true">
 		<classes>
-			<class name="com.rf.test.website.storeFront.hybris.OrderValidationTest">
+			<class name="com.rf.test.website.storeFront.hybris.EnrollmentValidationTest">
 				<!-- <methods>
 					<include name="testCreateAdhocOrderConsultant_1878" />
 					<include name="testCreateAdhocOrderPC_1877" />
